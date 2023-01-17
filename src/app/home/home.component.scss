@@ -1,0 +1,102 @@
+.container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90vw;
+    padding: 10vh 0;
+}
+
+.title{
+    font-size: 2.7rem !important;
+    font-weight: 800;
+    line-height: 1.2;
+    
+    font-family: 'Merriweather', serif;
+}
+
+.title2{
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+}
+
+.button{
+    background-color: #6333ff;
+    border: 1px solid #6333ff;
+    color: white;
+    font-size: 1.2rem !important;
+    font-family: 'Merriweather', serif;
+    padding: 1vh 3vw;
+}
+
+
+.text{
+    font-weight: 600;
+    font-size: 1rem !important;
+    font-family: 'Raleway', sans-serif;
+    color: black
+}
+.fav{
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+.bolt1{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    animation: rotate 4s linear infinite   
+}
+
+.bolt2{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    animation: rotate 4s linear infinite   
+}
+
+.rocket1{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    animation: rotate 4s linear infinite
+}
+.rocket2{
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    animation: rotate 4s linear infinite
+}
+.rocket3{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    animation: rotate 4s linear infinite
+}
+.rocket4{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    animation: rotate 4s linear infinite
+}
+@keyframes rotate{
+0% {
+    transform: rotate(0deg) translate(-10px) rotate(0deg);
+}
+
+100% {
+    transform: rotate(360deg) translate(-10px) rotate(-360deg);
+}
+}
+@keyframes pulsate-fwd{
+
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,59 @@
+<div  class="container">
+
+  
+  <div class="mat-elevation-z8" >
+    <button class="addQuery"  mat-raised-button (click)="openDialog()">
+        <img src=".\assets\images\sql2.png" class="img" style="margin-right: 3vw;transform: scale(1.3);"   >
+        <img src=".\assets\images\sqlHover.png" class="img1" style="margin-right: 3vw;transform: scale(1.3);display: none;"   >
+             Optimize a single query</button>
+    <div style="padding: 2vw 4vh 0;background-color: white;border-start-start-radius: 13px;border-start-end-radius: 13px;">
+        <h3 class="title2">Your SQL Queries Container</h3>
+        <mat-form-field style="width: 30vw;">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+        </mat-form-field>
+    </div>
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+
+      <ng-container matColumnDef="Query">
+        <th class="th1" mat-header-cell *matHeaderCellDef mat-sort-header> QUERY </th>
+        
+        <td  mat-cell class="td1" *matCellDef="let row">
+            <div  *ngIf="row.query.length>=20; else notAdmin"> {{row.querySub}}...</div> <ng-template #notAdmin>{{row.querySub}}</ng-template> </td>
+        
+      </ng-container>
+  
+
+      <ng-container matColumnDef="Execution Plan">
+        <th class="th1" mat-header-cell *matHeaderCellDef mat-sort-header> EXECUTION PLAN BEFORE </th>
+        <!-- <td mat-cell class="td1" *matCellDef="let row"> {{row.progress}}% </td> -->
+        <td mat-cell class="td1" *matCellDef="let row"><button style="color: #5e72e4;"  mat-raised-button (click)="getPlan(row.query)">Show Plan</button></td>
+      </ng-container>
+
+
+
+      <ng-container matColumnDef="Report">
+        <th class="th1" mat-header-cell *matHeaderCellDef mat-sort-header> OPTIMIZATION </th>
+        
+        <td mat-cell class="td1" *matCellDef="let row"><button style="color: #5e72e4;" (click)="report(row.query)"  mat-raised-button>Show Report</button></td>
+      </ng-container>
+  
+      <ng-container matColumnDef="Optimize">
+        <th class="th1" mat-header-cell *matHeaderCellDef mat-sort-header>  EXECUTION PLAN AFTER </th>
+        <!-- <td mat-cell class="td1" *matCellDef="let row"> {{row.name}} </td> -->
+        <td mat-cell class="td1" *matCellDef="let row"><button style="color: #5e72e4;" (click)="optimize(row.query)"   mat-raised-button>Optimize</button></td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+  
+    <mat-paginator style="border-end-start-radius: 13px;border-end-end-radius: 13px;" [pageSizeOptions]="[2,3,4]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</div>

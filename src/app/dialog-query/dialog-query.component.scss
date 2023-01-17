@@ -1,0 +1,48 @@
+.sql-keyword {
+     color: blue 
+    }
+.title{
+        font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    
+    font-family: 'Merriweather', serif !important;
+}
+
+.QUERY{
+    font-size: 1.1rem !important;
+font-weight: 500 !important;
+line-height: 1.2 !important;
+
+// font-family: 'Merriweather', serif !important;
+}
+
+.text{
+    font-weight: 700;
+    font-size: 1vw !important;
+    font-family: 'Raleway', sans-serif;
+    color: black
+}
+
+.container1{
+    position:relative;
+    padding: 3vh 1vw;
+    height: 70vh;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 20px !important;
+    // padding: 0.75em 0.75em 0 0.75em;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white;
+    box-shadow: 0 6px 7px 0 rgb(0 0 0 / 7%);
+    border: 1px solid #eee;
+}
+
+
+
+.mat-form-field-underline {
+    display: none !important;
+}

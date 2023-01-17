@@ -1,0 +1,45 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+    <ng-container matColumnDef="ID">
+      <th class="th1" mat-header-cell *matHeaderCellDef> ID </th>
+      <td class="td1" mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="OPERATION">
+      <th class="th1" mat-header-cell *matHeaderCellDef> OPERATION </th>
+      <td class="td1" mat-cell *matCellDef="let element"> {{element.operation}} </td>
+    </ng-container>
+ 
+    <ng-container matColumnDef="NAME">
+      <th class="th1" mat-header-cell *matHeaderCellDef> NAME </th>
+      <td class="td1" mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ROWS">
+      <th class="th1" mat-header-cell *matHeaderCellDef> ROWS </th>
+      <td class="td1" mat-cell *matCellDef="let element"> {{element.rows}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="BYTES">
+        <th class="th1" mat-header-cell *matHeaderCellDef> BYTES </th>
+        <td class="td1" mat-cell *matCellDef="let element"> {{element.bytes}} </td>
+      </ng-container>
+      <ng-container matColumnDef="COST (%CPU)">
+        <th class="th1" mat-header-cell *matHeaderCellDef> COST (%CPU) </th>
+        <td class="td1" mat-cell *matCellDef="let element"> {{element.cost}} </td>
+      </ng-container>
+      <ng-container matColumnDef="TIME">
+        <th class="th1" mat-header-cell *matHeaderCellDef> TIME </th>
+        <td class="td1" mat-cell *matCellDef="let element"> {{element.time}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+
+
+
+

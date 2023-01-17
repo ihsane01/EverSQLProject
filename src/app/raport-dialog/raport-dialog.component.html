@@ -1,0 +1,59 @@
+<h1 class="date" mat-dialog-title>RAPORT</h1>
+<div mat-dialog-content>
+<!-- Les indexes   <ul> -->
+    <!-- <li>
+      <span *ngIf="data.animal === 'panda'">&#10003;</span> Panda
+    </li>
+    <li>
+      <span *ngIf="data.animal === 'unicorn'">&#10003;</span> Unicorn
+    </li>
+    <li>
+      <span *ngIf="data.animal === 'lion'">&#10003;</span> Lion
+    </li> -->
+
+
+    
+        <!-- <li *ngFor="let x of dataSource">{{x  }}</li>
+    -->
+  <!-- </ul> -->
+  <div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+		
+			<h2>Created index </h2>
+		</div>
+		<div class="course-info">
+			<!-- <div class="progress-container"> -->
+				<!-- <div class="progress"></div> -->
+				<!-- <span class="progress-text">
+					6/9 Challenges
+				</span> -->
+			<!-- </div> -->
+			<!-- <h6>Chapter 4</h6> -->
+			<h2        *ngFor="let x of dataSource">{{x}}</h2>
+		</div>
+	</div>
+</div>
+  <div   *ngIf="this.var==true" class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+		
+			<h2>optimized query </h2>
+		</div>
+		<div class="course-info">
+			<!-- <div class="progress-container"> -->
+				<!-- <div class="progress"></div> -->
+				<!-- <span class="progress-text">
+					6/9 Challenges
+				</span> -->
+			<!-- </div> -->
+			<!-- <h6>Chapter 4</h6> -->
+			<h2    >{{requetoptimize}}</h2>
+		</div>
+	</div>
+</div>
+
+<!-- SOCIAL PANEL HTML -->
+
+
+</div>

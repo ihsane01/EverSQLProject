@@ -1,0 +1,20 @@
+
+<div class="container1">
+  <h2 class="title">Submit your SQL Query</h2>
+  <p class="text">Please submit the query you would like to optimize :</p>
+  <mat-form-field appearance="fill" style="width: 100%;">
+    <mat-label style="font-size: 20px;">Query</mat-label>
+    <br/>
+    <textarea rows="8" style="font-size: 20px;" matInput #sqlQuery (keyup)="highlightSQLKeywords()"></textarea>
+  </mat-form-field>
+<br/>
+<br/>
+
+<div  class="QUERY" [innerHTML]="htmlStr" style="text-align: center;color:#97a1dc;font-size: 25px;word-spacing: 7px;" ></div>
+
+<button style="position: absolute;top: 5px;right: 5px;" mat-icon-button mat-dialog-close matTooltip="Basic" aria-label="Example icon-button with a heart icon">
+    <mat-icon>close</mat-icon>
+  </button>
+  <button [routerLink]="['/tableQuery']" mat-dialog-close class="title" (click)="addQuery()" style="position: absolute;bottom: 5px;left: 7px;padding: 10px;" mat-raised-button >Continue</button>
+
+</div>
